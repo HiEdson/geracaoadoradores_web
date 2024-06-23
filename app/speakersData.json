@@ -1,0 +1,32 @@
+[
+    {
+        "name": "John Doe",
+        "image": "/modesto.jpg",
+        "title": "Chief Technology Officer",
+        "biography": "John Doe is the Chief Technology Officer at Tech Innovations Inc. With over 20 years of experience in the tech industry, John has led numerous projects that have revolutionized the company's approach to technology and innovation."
+    },
+    {
+        "name": "Jane Smith",
+        "image": "/eunice.jpg",
+        "title": "Head of Marketing",
+        "biography": "Jane Smith is the Head of Marketing at Creative Solutions. Jane has a decade of experience in digital marketing and branding, and she has been instrumental in driving the company's growth through innovative marketing strategies."
+    },
+    {
+        "name": "Robert Brown",
+        "image": "/guidilson.jpg",
+        "title": "Senior Product Manager",
+        "biography": "Robert Brown is a Senior Product Manager at Global Tech. With a strong background in product development and management, Robert has successfully overseen the launch of several key products that have significantly contributed to the company's success."
+    },
+    {
+        "name": "Carlos Brown",
+        "image": "/modesto1.jpg",
+        "title": "Senior Product Manager",
+        "biography": "Robert Brown is a Senior Product Manager at Global Tech. With a strong background in product development and management, Robert has successfully overseen the launch of several key products that have significantly contributed to the company's success."
+    },
+    {
+        "name": "Robert Brown",
+        "image": "/walter.jpg",
+        "title": "Senior Product Manager",
+        "biography": "Robert Brown is a Senior Product Manager at Global Tech. With a strong background in product development and management, Robert has successfully overseen the launch of several key products that have significantly contributed to the company's success."
+    }
+]

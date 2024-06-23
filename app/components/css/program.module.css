@@ -1,0 +1,11 @@
+.mytable{
+    background-color: #002c54 !important;
+    color: white;
+}
+
+.mytable table thead tr th {
+    background-color: #002c54 !important;
+    color: #F22F6B;
+    font-size: 1.2rem;
+}
+

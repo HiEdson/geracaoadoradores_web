@@ -26,8 +26,8 @@ const WelcomeCard = () => {
                         Modesto Bemba
                     </p>
                     <p className="italic text-sm">
-                        "Lider do G.A"
-                    </p>
+                        &quot; Lider do G.A &quot; 
+                     </p>
                 </div>
             </div>
 

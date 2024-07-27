@@ -5,7 +5,7 @@ import styles from './css/MapCard.module.css';
 import Head from 'next/head'
 
 
-mapboxgl.accessToken = "pk.eyJ1IjoiaG9zc2lpIiwiYSI6ImNseHJlODJ2aTFhMTYyam9kcXRneHMwM3EifQ.kyfJbEu4i698Iv9bD7xqjg";
+mapboxgl.accessToken = ".....";
 
 
 const MapCard = () => {

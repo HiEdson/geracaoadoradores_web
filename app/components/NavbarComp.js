@@ -1,10 +1,17 @@
 "use client"
-import React from "react";
+import { React, useState} from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaBars } from 'react-icons/fa';
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+
+import Sobre from "./Sobre";
 
 const NavbarComp = () => {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [size, setSize] = useState('5xl')
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
 
     const menuItems = [
         "Sobre",
@@ -14,8 +21,57 @@ const NavbarComp = () => {
         "FAQs",
     ];
 
+    let displayModal = <>
+    <Modal
+      size={size}
+      isOpen={isOpen}
+      onClose={onClose}
+      backdrop={"blur"}
+    >
+      <ModalContent>
+        {(onClose) => (
+          <>
+            <ModalHeader className="flex flex-col gap-1">Sobre a Conferência</ModalHeader>
+                        <ModalBody className="text-justify">
+              <p>
+                                Olá Santos Irmãos no Senhor Jesus Cristo, que a Bendita Paz que excede todo o entendimento humano seja com cada um de vocês.
+              </p>
+            <p>
+                                A Conferência Cartas de Deus é um evento Cristão criado pelo Ministério Geração de Adoradores, que surge com o propósito de congregar pessoas ligadas a fé Cristã para estudar as escrituras e aprender mais de Jesus e sobre Ele que é manso e humilde de coração e para este ano de abertura o tema será <b>Cartas de Deus</b>.
+            </p>
+            <p>
+                                O propósito é partilhar sobre a necessidade de compreendermos que cada Cristão é a mensagem viva de Deus no local onde está inserido e que provavelmente é a única Bíblia que muitos têm lido.
+            </p>
+            <p>
+                                No 1º. Painel falaremos sobre nossas vidas serem resultado do próprio Deus e que isso deve suscitar em nós uma atenção particular, pois, ninguém conhece melhor a criatura do que o próprio criador. Também falaremos sobre a confiança que há em sabermos que somos de Deus e não de nós mesmos.
+            </p>
+            <p>
+                                Já no 2º. Painel o subtema será centrado na compreensão de que como Cartas de Deus para todos a nossa volta, precisamos viver em conformidade com o evangelho de Cristo para que a mensagem não seja em nada confundida e assim haja credibilidade no que é pregado.
+            </p>
+            <p>
+                                Por fim, no 3º. Painel o subtema será a volta de como ministros de uma nova aliança, temos em nós responsabilidade acrescida e uma missão ministerial a cumprir. A dependência no reino que representamos também será compartilha.
+            </p>
+              <p>
+                                Não deixa de comparecer e leva convidados consigo, pois há sempre lugar para mais um no reino do amor de Deus, para honra e glória Dele.
+              </p>
+            
+            </ModalBody>
+          </>
+        )}
+      </ModalContent>
+    </Modal>
+    </>
+
+    const handleOpen = (size) => {
+        setSize(size)
+        onOpen();
+    }
+
+
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#002C54]">
+            {displayModal}
+
             <NavbarContent>
                 <NavbarBrand>
                     <img src="/simbolo.svg" alt="Left Logo" className="h-14 w-14 mr-2" />
@@ -24,12 +80,12 @@ const NavbarComp = () => {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link className="text-white" href="#">
+                    <Link className="text-white" href="#sobre" key={"sobre_pop"} onPress={() => handleOpen("5xl")} >
                         Sobre
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="#" aria-current="page" className="text-white">
+                    <Link href="/programacao" aria-current="page" className="text-white">
                         Programação
                     </Link>
                 </NavbarItem>
@@ -71,7 +127,7 @@ const NavbarComp = () => {
                     <NavbarMenuItem key={`${item}-${index}`}>
                         <Link
                             className="w-full text-[#002C54]"
-                            href="#"
+                            href={item ==="Programação"?"/programacao":"#"}
                             size="lg"
                         >
                             {item}

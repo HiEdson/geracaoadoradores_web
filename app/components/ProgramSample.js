@@ -30,6 +30,6 @@ export default function ProgramSample() {
                     </TableRow>
                 </TableBody>
             </Table>
-            </>
+        </>
     );
 }

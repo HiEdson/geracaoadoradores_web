@@ -5,6 +5,8 @@ import { Image } from "@nextui-org/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import NextImage from "next/image";
 import localFont from 'next/font/local'
+const path = require('path');
+
 
 import 'swiper/css';
 // import 'swiper/css/free-mode';
@@ -40,6 +42,8 @@ export const Speakers = ({data}) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+
+
     return (
         <>
             <Swiper
@@ -61,7 +65,7 @@ export const Speakers = ({data}) => {
                 modules={[Autoplay]}
                 className={`mySwiper `}
             >
-                {data.map(item => (
+                {data[0].map(item => (
                     <SwiperSlide key={item.key} className={`py-3 px-2 ${style.swiper_slideC}`}>
                         <Card className="w-full">
                             <CardBody className=" py-2">
@@ -75,14 +79,74 @@ export const Speakers = ({data}) => {
                                     }}
                                     as={NextImage}
                                     alt="Card background"
-                                    className=" rounded-xl inset-0 object-cover"
-                                    src={item.image}
+                                    className=" rounded-xl inset-0 object-contain"
+                                    src={`/Painelistas/Iº. Painel/${item}`}
                                     width={270}
                                     height={180} // Adjust the height as needed
                                     
                                 />
                                 <div className="pb-0 pt-2 px-4 flex-col items-start">
-                                    <p className={`text-tiny uppercase font-bold tracking-widest text-[1.11rem] ${myFont.className}`}>{item.name}</p>
+                                    <p className={`text-tiny uppercase font-bold tracking-widest text-[1.11rem] ${myFont.className}`}>
+                                        {item?.split(' ')[1] + " " + item?.split(' ')[2] + " - " + item?.split(' ')[4].split(".")[0]}</p>
+                                    <small className="text-default-500">{item.title}</small>
+                                </div>
+                            </CardBody>
+                        </Card>
+                    </SwiperSlide>
+                ))}
+
+                {data[1].map(item => (
+                    <SwiperSlide key={item.key} className={`py-3 px-2 ${style.swiper_slideC}`}>
+                        <Card className="w-full">
+                            <CardBody className=" py-2">
+                                <Image
+                                    style={{
+                                        opacity: "100 !important",
+                                        // background: "red !important",
+                                        // Add other styles as needed
+                                        height: "30vh !important",
+                                        width: "100% !important"
+                                    }}
+                                    as={NextImage}
+                                    alt="Card background"
+                                    className=" rounded-xl inset-0 object-contain"
+                                    src={`/Painelistas/IIº. Painel/${item}`}
+                                    width={270}
+                                    height={180} // Adjust the height as needed
+
+                                />
+                                <div className="pb-0 pt-2 px-4 flex-col items-start">
+                                    <p className={`text-tiny uppercase font-bold tracking-widest text-[1.11rem] ${myFont.className}`}>
+                                        {item?.split(' ')[1] + " " + item?.split(' ')[2] + " - " + item?.split(' ')[4].split(".")[0]}</p>
+                                    <small className="text-default-500">{item.title}</small>
+                                </div>
+                            </CardBody>
+                        </Card>
+                    </SwiperSlide>
+                ))}
+                {data[2].map(item => (
+                    <SwiperSlide key={item.key} className={`py-3 px-2 ${style.swiper_slideC}`}>
+                        <Card className="w-full">
+                            <CardBody className=" py-2">
+                                <Image
+                                    style={{
+                                        opacity: "100 !important",
+                                        // background: "red !important",
+                                        // Add other styles as needed
+                                        height: "30vh !important",
+                                        width: "100% !important"
+                                    }}
+                                    as={NextImage}
+                                    alt="Card background"
+                                    className=" rounded-xl inset-0 object-contain"
+                                    src={`/Painelistas/IIIº. Painel/${item}`}
+                                    width={270}
+                                    height={180} // Adjust the height as needed
+
+                                />
+                                <div className="pb-0 pt-2 px-4 flex-col items-start">
+                                    <p className={`text-tiny uppercase font-bold tracking-widest text-[1.11rem] ${myFont.className}`}>
+                                        {item?.split(' ')[1] + " " + item?.split(' ')[2] + " - " + item?.split(' ')[4].split(".")[0]}</p>
                                     <small className="text-default-500">{item.title}</small>
                                 </div>
                             </CardBody>

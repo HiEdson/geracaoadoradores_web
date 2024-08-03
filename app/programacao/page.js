@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarComp from "../components/NavbarComp";
 import FullProgramTable from "../components/FullProgramacaoPage";
+import FooterCard from "../components/Footer";
 
 
 const Programa =()=>{
@@ -13,6 +14,7 @@ const Programa =()=>{
             <div className="mx-4">
                 <FullProgramTable />
             </div>
+            <FooterCard/>
         </>
 
     )

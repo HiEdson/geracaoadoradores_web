@@ -11,7 +11,7 @@ import MapCard from "./components/MapCard";
 import FooterCard from "./components/Footer";
 const fs = require('fs');
 const path = require('path');
-
+import Link from "next/link";
 
 // export const metadata = {
 //   stylesheet: 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css',
@@ -97,9 +97,11 @@ export default function Home() {
         <h1 className={`text-center text-4xl font-bold mb-3 tracking-widest ${myFont.className}`}>Painelistas</h1>
         <Speakers data={[speakers1, speakers2, speakers3]} />
         <div className="text-center mt-2">
-          <Button variant="shadow" radius="full" className="w-1/8 bg-[#F22F6B] text-white">
-            Saiba Mais
-          </Button>
+          <Link href='/conferencistas'>
+            <Button variant="shadow" radius="full" className="w-1/8 bg-[#F22F6B] text-white">
+              Saiba Mais
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -121,7 +123,6 @@ export default function Home() {
         </div>
         <FooterCard/>
       </div>
-
     </main>
   );
 }

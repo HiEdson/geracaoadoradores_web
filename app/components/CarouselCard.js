@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import style from './css/landing.module.css'; // Ensure this path is correct
-import {Pagination, Navigation } from 'swiper/modules';
+import {Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const CarouselCard = () => {
     const items = [
@@ -44,8 +44,13 @@ const CarouselCard = () => {
                     clickable: true,
                     type: 'bullets',
                 }}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, Autoplay]}
                 className={`mySwiper ${style.swiperContainer}`} // Add custom class from CSS module
                 style={{ width: '100%', height: '90%' }}
             >

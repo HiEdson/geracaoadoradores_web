@@ -14,10 +14,10 @@ const NavbarComp = () => {
     
 
     const menuItems = [
+        "Casa",
         "Sobre",
         "Conferencistas",
         "Programação",
-        "Contacto",
         "FAQs",
     ];
 
@@ -74,11 +74,18 @@ const NavbarComp = () => {
 
             <NavbarContent>
                 <NavbarBrand>
-                    <img src="/simbolo.svg" alt="Left Logo" className="h-14 w-14 mr-2" />
+                    <Link href="/">
+                        <img src="/simbolo.svg" alt="Left Logo" className="h-14 w-14 mr-2" />
+                    </Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                <NavbarItem>
+                    <Link className="text-white" href="/">
+                        Casa
+                    </Link>
+                </NavbarItem>
                 <NavbarItem>
                     <Link className="text-white" href="#sobre" key={"sobre_pop"} onPress={() => handleOpen("5xl")} >
                         Sobre
@@ -90,29 +97,25 @@ const NavbarComp = () => {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className="text-white" href="#">
+                    <Link className="text-white" href="/conferencistas">
                         Conferencistas 
                     </Link>
                 </NavbarItem>
-                <NavbarItem>
-                    <Link className="text-white" href="#">
-                        Contacto 
-                    </Link>
-                </NavbarItem>
+                
             </NavbarContent>
 
             <NavbarContent justify="end">
                 <div className="flex items-center space-x-4">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                    <a href="https://web.facebook.com/profile.php?id=100081261017220" target="_blank" rel="noopener noreferrer" className="text-white">
                         <FaFacebookF />
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-white">
                         <FaInstagram />
                     </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                    <a href="https://www.tiktok.com/@geracao_adoradores?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="text-white">
                         <FaTiktok />
                     </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                    <a href="https://www.youtube.com/channel/UCxhBq3bwX3-N82KWvHvcK7g" target="_blank" rel="noopener noreferrer" className="text-white">
                         <FaYoutube />
                     </a>
                     <NavbarMenuToggle
@@ -127,7 +130,8 @@ const NavbarComp = () => {
                     <NavbarMenuItem key={`${item}-${index}`}>
                         <Link
                             className="w-full text-[#002C54]"
-                            href={item ==="Programação"?"/programacao":"#"}
+                            href={item === "Programação" ? "/programacao" : item === "Casa" ?"/":
+                                item === "Conferencistas" ? "/conferencistas": "#"}
                             size="lg"
                         >
                             {item}

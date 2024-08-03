@@ -56,6 +56,7 @@ const FullProgramTable = () => {
                                 <strong>1º. Painel:</strong> Carta escrita não com tinta, mas pelo Espírito do Deus Vivo.<br />
                                 <strong>2º. Painel:</strong> O Cristão como carta de Deus para sociedade.<br />
                                 <strong>3º. Painel:</strong> Ministros de uma nova aliança.<br />
+                                <br />
                                 <strong>Noite</strong><br />
                                 18:00 - CULTO DE ORAÇÃO & ADORAÇÃO;<br />
                                 18:30 – Exibição da Peça Teatral<br />

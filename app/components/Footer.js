@@ -5,8 +5,8 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaBars } from 'react-ico
 const FooterCard = () => {
 
     return (
-        <footer className="bg-white text-white py-10 border-1 border-t-slate-400" style={{marginTop:"35%"}}>
-            <div className="container mx-auto px-5 ">
+        <footer className="bg-white text-white py-10 border-1 border-t-slate-400" style={{marginTop:"10%"}}>
+            <div className="container mx-auto px-5">
                 {/* Event Description */}
                 <div className=" mb-5 text-center text-black">
                     <p className="text-lg">Um lugar para aprender sobre Jesus, que é manso e humilde de coração

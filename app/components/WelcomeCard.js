@@ -1,6 +1,7 @@
 import React from "react";
 import { Image, Button } from "@nextui-org/react";
 import localFont from 'next/font/local'
+import Link from "next/link";
 const myFont = localFont({
     src: '../../public/Abigail.ttf',
     display: 'swap',
@@ -26,11 +27,10 @@ const WelcomeCard = () => {
                         Modesto Bemba
                     </p>
                     <p className="italic text-sm">
-                        &quot; Lider do G.A &quot; 
+                        &quot; Líder do G.A &quot; 
                      </p>
                 </div>
             </div>
-
 
 
             <div className="sm:w-2/3 mt-4 sm:mt-0 sm:ml-6 flex flex-col justify-center">
@@ -46,9 +46,11 @@ const WelcomeCard = () => {
                     Venha e participe, a tua presença é uma benção.
                 </h4>
                 <div className="text-center mt-2">
-                    <Button variant="shadow" radius="full" className="w-1/4 bg-[#F22F6B] text-white">
-                        Saiba Mais
-                    </Button>
+                    <Link href='/programacao'>
+                        <Button variant="shadow" radius="full" className="w-1/4 bg-[#F22F6B] text-white">
+                            Saiba Mais
+                        </Button>
+                    </Link>
                 </div>
 
             </div>

@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 
 import style from './css/speakersCard.module.css'
 
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay} from 'swiper/modules';
 
 
 const myFont = localFont({

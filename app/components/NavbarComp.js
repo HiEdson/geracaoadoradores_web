@@ -1,10 +1,11 @@
 "use client"
 import { React, useState} from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaBars } from 'react-icons/fa';
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
-
+import Link from "next/link";
 import Sobre from "./Sobre";
+import Image from "next/image";
 
 const NavbarComp = () => {
 
@@ -75,7 +76,7 @@ const NavbarComp = () => {
             <NavbarContent>
                 <NavbarBrand>
                     <Link href="/">
-                        <img src="/simbolo.svg" alt="Left Logo" className="h-14 w-14 mr-2" />
+                        <Image src="/simbolo.svg" alt="Left Logo" className="mr-2" width={45} height={45}/>
                     </Link>
                 </NavbarBrand>
             </NavbarContent>
